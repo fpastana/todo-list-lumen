@@ -13,16 +13,6 @@ use Auth;
 
 class TodoNoteController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        //
-    }
-
     public function index()
     {
         $todo_notes = TodoNote::where('user_id', Auth::User()->id)->orderBy('id', 'desc')->get();
@@ -83,8 +73,6 @@ class TodoNoteController extends Controller
         } else {
             return response()->json(['Error' => 'You do not have permission to perform this operation'], 412);
         }
-
-
     }
 
     public function markAsComplete(Request $request, $id)
