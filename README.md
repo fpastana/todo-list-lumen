@@ -5,20 +5,44 @@
 [![Latest Stable Version](https://img.shields.io/packagist/v/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
 [![License](https://img.shields.io/packagist/l/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+# About the App
 
-## Official Documentation
+This app creates a todo-list API using RESTful.
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+## Technology Stack
 
-## Contributing
+- [Lumen v8.x](https://lumen.laravel.com): This is a PHP Micro Framework.
+- [MYSQL](https://www.mysql.com/): MySQL a Relational Database
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# System Requirements
 
-## Security Vulnerabilities
+-   PHP v7.3 
+-   Composer
+-   Any Laravel supported database
+-   As the current version is built on Laravel Lumen v8.x, all requirements of this version of Lumen MUST be met [as stated here](https://lumen.laravel.com/docs/8.x#server-requirements).
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+# Setting up the Dev Environment
 
-## License
+-   Inside the application folder, copy the `.env.example` file to `.env`
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+cp .env.example .env
+```
+
+-   Open the `.env` file and set your local environment variables such as `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`.
+
+-   Install the composer packages:
+
+```
+# composer install
+```
+
+- Run the migration and seed commands
+
+```
+# php artisan migrate
+``` 
+
+***For tutorials on how to build Open Source Apps, please go to [felipepastana.com](https://felipepastana.com)***
+
+
